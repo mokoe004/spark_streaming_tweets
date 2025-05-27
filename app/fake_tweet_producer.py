@@ -13,7 +13,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print(f"Connected by {addr}")
-        with open('tweets_processed.csv', encoding='utf-8') as f:
+        with open('../tweets_processed.csv', encoding='utf-8') as f:
             reader = csv.reader(f)
             next(reader)  # skip header
             for row in reader:
